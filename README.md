@@ -26,7 +26,7 @@ A **TypeScript** type definitions package for configurable, composable, trait-dr
 
 ## Features
 
-- **Configurable**: Create data adapters for data models with configuration.
+- **Adaptable**: Create data models with configuration and adapter.
 - **Trait-based**: Mix and match interfaces like `Adaptable`, `Queryable`, `Exportable`, and [more](https://github.com/typedly/data-traits).
 - **Ecosystem**: Works seamlessly with other [`@typedly`](https://github.com/typedly) packages.
 
