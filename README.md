@@ -103,7 +103,7 @@ import {
 import { AdaptableDataConstructor } from '@typedly/data-adapter';
 ```
 
-[Source](https://)
+[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/adaptable.data.constructor.ts)
 
 ### `AdaptableDataShape`
 
@@ -111,7 +111,7 @@ import { AdaptableDataConstructor } from '@typedly/data-adapter';
 import { AdaptableDataShape } from '@typedly/data-adapter';
 ```
 
-[Source]()
+[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/adaptable.data.shape.ts)
 
 ### Type
 
@@ -121,7 +121,7 @@ import { AdaptableDataShape } from '@typedly/data-adapter';
 import { InferAdaptableValue } from '@typedly/data-adapter';
 ```
 
-[Source]()
+[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/infer-adaptable-value.type.ts)
 
 ### `InferSettings`
 
@@ -129,7 +129,7 @@ import { InferAdaptableValue } from '@typedly/data-adapter';
 import { InferSettings } from '@typedly/data-adapter';
 ```
 
-[Source]()
+[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/infer-settings.type.ts)
 
 ## Contributing
 
