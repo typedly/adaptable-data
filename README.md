@@ -121,7 +121,7 @@ Infers the value type from configurable, and data shape interface.
 
 > **Deprecated:**  
 > This utility is redundant and should **not be used**.  
-> **Use [`InferValue`](https://github.com/typedly/data/blob/main/src/lib/infer-value.type.ts) from `@typedly/data` instead.**
+> **Use [`InferValue`](https://github.com/typedly/data/blob/main/src/inference/lib/infer-value.type.ts) from `@typedly/data` instead.**
 
 ```typescript
 import { InferAdaptableValue } from '@typedly/data-adapter';
@@ -135,7 +135,7 @@ Infers the settings type from a data adapter, or adaptable data shape.
 
 > **Deprecated:**  
 > This utility is redundant and should **not be used**.  
-> **Use [`InferSettings`](https://github.com/typedly/configurable-data/blob/main/src/lib/infer-settings.type.ts) from `@typedly/configurable-data` instead.**
+> **Use [`InferSettings`](https://github.com/typedly/configurable-data/blob/main/src/inference/lib/infer-settings.type.ts) from `@typedly/configurable-data` instead.**
 
 ```typescript
 import { InferSettings } from '@typedly/data-adapter';
