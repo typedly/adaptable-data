@@ -90,9 +90,9 @@ npm install @typedly/adaptable-data --save-peer
 import {
   AdaptableDataConstructor,
   AdaptableDataShape,
-  InferAdaptableValue,
-  InferSettings,
-} from '@typedly/data-adapter';
+  InferAdaptableValue, // deprecated in favor of `InferValue` from `@typedly/data`
+  InferSettings, // deprecated in favor of `InferSettings` from `@typedly/configurable-data`
+} from '@typedly/adaptable-data';
 ```
 
 ### Interface
@@ -100,7 +100,7 @@ import {
 ### `AdaptableDataConstructor`
 
 ```typescript
-import { AdaptableDataConstructor } from '@typedly/data-adapter';
+import { AdaptableDataConstructor } from '@typedly/adaptable-data';
 ```
 
 [Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/adaptable.data.constructor.ts)
@@ -108,7 +108,7 @@ import { AdaptableDataConstructor } from '@typedly/data-adapter';
 ### `AdaptableDataShape`
 
 ```typescript
-import { AdaptableDataShape } from '@typedly/data-adapter';
+import { AdaptableDataShape } from '@typedly/adaptable-data';
 ```
 
 [Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/adaptable.data.shape.ts)
@@ -117,16 +117,28 @@ import { AdaptableDataShape } from '@typedly/data-adapter';
 
 ### `InferAdaptableValue`
 
+Infers the value type from configurable, and data shape interface.
+
+> **Deprecated:**  
+> This utility is redundant and should **not be used**.  
+> **Use [`InferValue`](https://github.com/typedly/data/blob/main/src/inference/lib/infer-value.type.ts) from `@typedly/data` instead.**
+
 ```typescript
-import { InferAdaptableValue } from '@typedly/data-adapter';
+import { InferAdaptableValue } from '@typedly/adaptable-data';
 ```
 
 [Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/infer-adaptable-value.type.ts)
 
 ### `InferSettings`
 
+Infers the settings type from a data adapter, or adaptable data shape.
+
+> **Deprecated:**  
+> This utility is redundant and should **not be used**.  
+> **Use [`InferSettings`](https://github.com/typedly/configurable-data/blob/main/src/inference/lib/infer-settings.type.ts) from `@typedly/configurable-data` instead.**
+
 ```typescript
-import { InferSettings } from '@typedly/data-adapter';
+import { InferSettings } from '@typedly/adaptable-data';
 ```
 
 [Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/infer-settings.type.ts)
@@ -163,7 +175,7 @@ Thanks for your support!
 
 ## Code of Conduct
 
-By participating in this data-adapter, you agree to follow **[Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)**.
+By participating in this package, you agree to follow **[Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)**.
 
 ## GIT
 

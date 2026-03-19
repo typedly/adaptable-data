@@ -7,7 +7,7 @@ import {
   InferAsyncOf,
   InferValue
 } from '@typedly/data';
-import { InferSettings } from './infer-settings.type';
+import { InferSettings } from '@typedly/configurable-data';
 /**
  * @description The constructor interface for data types with adapter.
  * @export
