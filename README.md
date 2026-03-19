@@ -90,8 +90,8 @@ npm install @typedly/adaptable-data --save-peer
 import {
   AdaptableDataConstructor,
   AdaptableDataShape,
-  InferAdaptableValue,
-  InferSettings,
+  InferAdaptableValue, // deprecated in favor of `InferValue` from `@typedly/data`
+  InferSettings, // deprecated in favor of `InferSettings` from `@typedly/configurable-data`
 } from '@typedly/data-adapter';
 ```
 
@@ -117,6 +117,12 @@ import { AdaptableDataShape } from '@typedly/data-adapter';
 
 ### `InferAdaptableValue`
 
+Infers the value type from configurable, and data shape interface.
+
+> **Deprecated:**  
+> This utility is redundant and should **not be used**.  
+> **Use [`InferValue`](https://github.com/typedly/data/blob/main/src/lib/infer-value.type.ts) from `@typedly/data` instead.**
+
 ```typescript
 import { InferAdaptableValue } from '@typedly/data-adapter';
 ```
@@ -124,6 +130,12 @@ import { InferAdaptableValue } from '@typedly/data-adapter';
 [Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/infer-adaptable-value.type.ts)
 
 ### `InferSettings`
+
+Infers the settings type from a data adapter, or adaptable data shape.
+
+> **Deprecated:**  
+> This utility is redundant and should **not be used**.  
+> **Use [`InferSettings`](https://github.com/typedly/configurable-data/blob/main/src/lib/infer-settings.type.ts) from `@typedly/configurable-data` instead.**
 
 ```typescript
 import { InferSettings } from '@typedly/data-adapter';
