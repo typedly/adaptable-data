@@ -39,7 +39,7 @@ A **TypeScript** type definitions package for configurable, composable, trait-dr
     - [`AdaptableDataConstructor`](#adaptabledataconstructor)
     - [`AdaptableDataShape`](#adaptabledatashape)
   - Type
-    - [`AdaptableSettings`](#adaptablesettings)
+    - [`AdaptableSettingsResolver`](#adaptablesettingsresolver)
 - [Contributing](#contributing)
 - [Support](#support)
 - [Code of Conduct](#code-of-conduct)
@@ -112,15 +112,15 @@ import { AdaptableDataShape } from '@typedly/adaptable-data';
 
 ### Type
 
-### `AdaptableSettings`
+### `AdaptableSettingsResolver`
 
-The adaptable settings type, which conditionally requires `fetcher` and `updater` properties from `CacheableSettings<T>` if the adapter type `A` is undefined and the async flag `R` is true.
+The adaptable settings type, which conditionally requires `fetcher` and `updater` properties from `CacheableSettings<T>` if the adapter type `A` is `undefined` and the async flag `R` is `true`.
 
 ```typescript
-import { AdaptableSettings } from '@typedly/adaptable-data';
+import { AdaptableSettingsResolver } from '@typedly/adaptable-data';
 ```
 
-[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/adaptable-settings.type.ts)
+[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/adaptable-settings-resolver.type.ts)
 
 ## Contributing
 
