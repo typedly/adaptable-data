@@ -5,6 +5,5 @@
 export type {
   AdaptableDataConstructor,
   AdaptableDataShape,
-  InferAdaptableValue,
-  InferSettings,
+  AdaptableSettingsResolver,
 } from './lib';

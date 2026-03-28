@@ -1,6 +1,6 @@
 {
   "name": "@typedly/adaptable-data",
-  "version": "4.2.0",
+  "version": "5.0.0",
   "author": "wwwdev.io <dev@wwwdev.io>",
   "description": "A TypeScript type definitions package for configurable, composable, trait-driven adaptable data models with adapter support.",
   "license": "MIT",
