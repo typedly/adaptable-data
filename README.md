@@ -39,8 +39,7 @@ A **TypeScript** type definitions package for configurable, composable, trait-dr
     - [`AdaptableDataConstructor`](#adaptabledataconstructor)
     - [`AdaptableDataShape`](#adaptabledatashape)
   - Type
-    - [`InferAdaptableValue`](#inferadaptablevalue)
-    - [`InferSettings`](#infersettings)
+    - [`AdaptableSettings`](#adaptablesettings)
 - [Contributing](#contributing)
 - [Support](#support)
 - [Code of Conduct](#code-of-conduct)
@@ -89,8 +88,7 @@ npm install @typedly/adaptable-data --save-peer
 import {
   AdaptableDataConstructor,
   AdaptableDataShape,
-  InferAdaptableValue, // deprecated in favor of `InferValue` from `@typedly/data`
-  InferSettings, // deprecated in favor of `InferSettings` from `@typedly/configurable-data`
+  AdaptableSettings,
 } from '@typedly/adaptable-data';
 ```
 
@@ -114,33 +112,15 @@ import { AdaptableDataShape } from '@typedly/adaptable-data';
 
 ### Type
 
-### `InferAdaptableValue`
+### `AdaptableSettings`
 
-Infers the value type from configurable, and data shape interface.
-
-> **Deprecated:**  
-> This utility is redundant and should **not be used**.  
-> **Use [`InferValue`](https://github.com/typedly/data/blob/main/src/inference/lib/infer-value.type.ts) from `@typedly/data` instead.**
+The adaptable settings type, which conditionally requires `fetcher` and `updater` properties from `CacheableSettings<T>` if the adapter type `A` is undefined and the async flag `R` is true.
 
 ```typescript
-import { InferAdaptableValue } from '@typedly/adaptable-data';
+import { AdaptableSettings } from '@typedly/adaptable-data';
 ```
 
-[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/infer-adaptable-value.type.ts)
-
-### `InferSettings`
-
-Infers the settings type from a data adapter, or adaptable data shape.
-
-> **Deprecated:**  
-> This utility is redundant and should **not be used**.  
-> **Use [`InferSettings`](https://github.com/typedly/configurable-data/blob/main/src/inference/lib/infer-settings.type.ts) from `@typedly/configurable-data` instead.**
-
-```typescript
-import { InferSettings } from '@typedly/adaptable-data';
-```
-
-[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/infer-settings.type.ts)
+[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/adaptable-settings.type.ts)
 
 ## Contributing
 
