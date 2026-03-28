@@ -10,7 +10,7 @@ import type { DataAdapterShape } from "@typedly/data-adapter";
  * @template {boolean} R The type of asynchronous operations, which determines whether the data operations are asynchronous (true) or synchronous (false).
  * @template {DataAdapterShape<C, T, R> | undefined} A The adapter type, which can be undefined for more flexible inference.
  */
-export type AdaptableSettings<
+export type AdaptableSettingsResolver<
   C extends DataSettings<R> & CacheableSettings<T>,
   T,
   R extends boolean,
