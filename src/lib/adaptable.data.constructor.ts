@@ -1,13 +1,6 @@
 // Interface.
-import { AdaptableDataShape } from './adaptable.data.shape';
-import { DataAdapterConstructor, DataAdapterShape } from '@typedly/data-adapter';
-import {
-  DataSettings,
-  // Type.
-  InferAsyncOf,
-  InferValue
-} from '@typedly/data';
-import { InferSettings } from '@typedly/configurable-data';
+import type { AdaptableDataShape } from './adaptable.data.shape';
+import type { DataAdapterConstructor, DataAdapterShape } from '@typedly/data-adapter';
 /**
  * @description The constructor interface for data types with adapter.
  * @export
@@ -20,17 +13,31 @@ import { InferSettings } from '@typedly/configurable-data';
  * @template {readonly any[]} [G=[]] The additional arguments type.
  */
 export interface AdaptableDataConstructor<
-  A extends DataAdapterShape<C, T, R>,
-  I extends AdaptableDataShape<A, C, T, R>,
-  C extends DataSettings<R> = InferSettings<A>,
-  T = InferValue<A>,
-  R extends boolean = InferAsyncOf<[C, A, I]>,
+  A extends DataAdapterShape<T, R> | undefined,
+  I extends AdaptableDataShape<A, T, R>,
+  T,
+  R extends boolean = false,
   G extends readonly any[] = []
 > {
   new (
-    settings: C,
-    value: T | undefined,
-    adapter: DataAdapterConstructor<A, C, T, R, G>,
+    value?: T,
+    adapter?: DataAdapterConstructor<A, T, R, G>,
     ...args: G
   ): I;
 }
+
+// export interface AdaptableDataConstructor<
+//   A extends DataAdapterShape<C, T, R> | undefined,
+//   I extends AdaptableDataShape<A, C, T, R>,
+//   C extends DataSettings<R> = InferSettings<A>,
+//   T = InferValue<A>,
+//   R extends boolean = InferAsyncOf<[C, A, I]>,
+//   G extends readonly any[] = []
+// > {
+//   new (
+//     settings: C,
+//     value: T | undefined,
+//     adapter: A extends undefined ? undefined : DataAdapterConstructor<A, C, T, R, G>,
+//     ...args: G
+//   ): I;
+// }
