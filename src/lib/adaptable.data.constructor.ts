@@ -8,14 +8,14 @@ import type { DataAdapterConstructor, DataAdapterShape } from '@typedly/data-ada
  * @template {DataAdapterShape<T, R> | undefined} A The data adapter instance type.
  * @template {AdaptableDataShape<A, T, R>} I The data instance type.
  * @template T The value type.
- * @template {boolean} [R=false] The async flag, which can be inferred from `A` if possible.
+ * @template {boolean} R The async flag, which can be inferred from `A` if possible.
  * @template {readonly any[]} [G=[]] The additional arguments type.
  */
 export interface AdaptableDataConstructor<
   I extends AdaptableDataShape<A, T, R>,
   A extends DataAdapterShape<T, R> | undefined,
   T,
-  R extends boolean = false,
+  R extends boolean,
   G extends readonly any[] = []
 > {
   new (
