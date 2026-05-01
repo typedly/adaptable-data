@@ -123,7 +123,7 @@ import { AdaptableConfigurableBase } from '@typedly/adaptable-data';
 import { AdaptableConfigurableDataConstructor } from '@typedly/adaptable-data';
 ```
 
-[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/configurable-adaptable.data.constructor.ts)
+[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/adaptable-configurable.data.constructor.ts)
 
 ### `AdaptableConfigurableDataShape`
 
@@ -131,7 +131,7 @@ import { AdaptableConfigurableDataConstructor } from '@typedly/adaptable-data';
 import { AdaptableConfigurableDataShape } from '@typedly/adaptable-data';
 ```
 
-[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/configurable-adaptable.data.shape.ts)
+[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/adaptable-configurable.data.shape.ts)
 
 ### `AdaptableDataConstructor`
 
