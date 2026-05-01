@@ -7,15 +7,15 @@ import type { DataSettings } from "@typedly/data";
  * @export
  * @interface AdaptableConfigurableBase
  * @template A The adapter type.
- * @template {DataSettings<R> | undefined} C The settings type.
+ * @template {DataSettings<S> | undefined} C The settings type.
  * @template T The value type.
- * @template {boolean} R The async flag.
+ * @template {boolean} S The async flag.
  * @extends {Adaptable<A>}
- * @extends {ConfigurableDataShape<C, T, R>}
+ * @extends {ConfigurableDataShape<C, T, S>}
  */
 export interface AdaptableConfigurableBase<
   A,
-  C extends DataSettings<R> | undefined,
+  C extends DataSettings<S> | undefined,
   T,
-  R extends boolean
-> extends Adaptable<A>, ConfigurableDataShape<C, T, R> {}
+  S extends boolean
+> extends Adaptable<A>, ConfigurableDataShape<C, T, S> {}
