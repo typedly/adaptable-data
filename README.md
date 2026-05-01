@@ -36,6 +36,9 @@ A **TypeScript** type definitions package for configurable, composable, trait-dr
 - [Installation](#installation)
 - [Api](#api)
   - Interface
+    - [`AdaptableConfigurableBase`](#adaptabledatashape)
+    - [`AdaptableConfigurableDataConstructor`](#adaptabledatashape)
+    - [`AdaptableConfigurableDataShape`](#adaptabledatashape)
     - [`AdaptableDataConstructor`](#adaptabledataconstructor)
     - [`AdaptableDataShape`](#adaptabledatashape)
   - Type
