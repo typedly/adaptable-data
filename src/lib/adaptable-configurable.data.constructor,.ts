@@ -3,7 +3,7 @@ import type { AdaptableConfigurableDataShape } from "./adaptable.configurable.da
 import type { ConfigurableDataAdapterConstructor, ConfigurableDataAdapterShape } from "@typedly/data-adapter";
 import type { DataSettings, InferAsyncOf } from "@typedly/data";
 /**
- * @description 
+ * @description Represents the constructor of an adaptable and configurable data type, which can be instantiated with optional settings, value, and adapter.
  * @export
  * @interface AdaptableConfigurableDataConstructor
  * @template {AdaptableConfigurableDataShape<A, C, T, S>} I The instance type.
