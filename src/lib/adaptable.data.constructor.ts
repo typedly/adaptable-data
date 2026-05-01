@@ -5,16 +5,15 @@ import type { DataAdapterConstructor, DataAdapterShape } from '@typedly/data-ada
  * @description The constructor interface for data types with adapter.
  * @export
  * @interface AdaptableDataConstructor
- * @template {DataAdapterShape<T, C, R>} A The data adapter instance type.
- * @template {AdaptableDataShape<A, T, C, R>} I The data instance type.
- * @template {{ async?: boolean }} [C=A extends DataAdapterShape<any, infer V, any> ? V : any] The configuration type, inferred from A if possible.
- * @template [T=A extends DataAdapterShape<infer U, any, any> ? U : any] The underlying value type, inferred from A if possible.
- * @template {boolean} [R=A extends DataAdapterShape<T, C, infer U> ? U extends boolean ? U : false : false] The async flag, inferred from A if possible.
+ * @template {DataAdapterShape<T, R> | undefined} A The data adapter instance type.
+ * @template {AdaptableDataShape<A, T, R>} I The data instance type.
+ * @template T The value type.
+ * @template {boolean} [R=false] The async flag, which can be inferred from `A` if possible.
  * @template {readonly any[]} [G=[]] The additional arguments type.
  */
 export interface AdaptableDataConstructor<
-  A extends DataAdapterShape<T, R> | undefined,
   I extends AdaptableDataShape<A, T, R>,
+  A extends DataAdapterShape<T, R> | undefined,
   T,
   R extends boolean = false,
   G extends readonly any[] = []
@@ -25,19 +24,3 @@ export interface AdaptableDataConstructor<
     ...args: G
   ): I;
 }
-
-// export interface AdaptableDataConstructor<
-//   A extends DataAdapterShape<C, T, R> | undefined,
-//   I extends AdaptableDataShape<A, C, T, R>,
-//   C extends DataSettings<R> = InferSettings<A>,
-//   T = InferValue<A>,
-//   R extends boolean = InferAsyncOf<[C, A, I]>,
-//   G extends readonly any[] = []
-// > {
-//   new (
-//     settings: C,
-//     value: T | undefined,
-//     adapter: A extends undefined ? undefined : DataAdapterConstructor<A, C, T, R, G>,
-//     ...args: G
-//   ): I;
-// }
