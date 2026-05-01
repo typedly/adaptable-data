@@ -10,7 +10,7 @@ import type { DataSettings, InferAsyncOf } from "@typedly/data";
  * @template {ConfigurableDataAdapterShape<C, T, S> | undefined} A The adapter type.
  * @template {DataSettings<S> | undefined} C The settings type.
  * @template T The value type.
- * @template {boolean} [S=InferAsyncOf<[C, A]>] The async flag.
+ * @template {boolean} S The async flag, which can be inferred from `I` or `A` if possible.
  * @template {readonly any[]} [G=[]] The additional arguments type.
  * @template [AC=ConfigurableDataAdapterConstructor<A, C, T, S, G>] The adapter constructor type.
  */
@@ -19,7 +19,7 @@ export interface AdaptableConfigurableDataConstructor<
   A extends ConfigurableDataAdapterShape<C, T, S> | undefined,
   C extends DataSettings<S> | undefined,
   T,
-  S extends boolean = InferAsyncOf<[C, A]>,
+  S extends boolean,
   G extends readonly any[] = [],
   AC = ConfigurableDataAdapterConstructor<A, C, T, S, G>
 > {
