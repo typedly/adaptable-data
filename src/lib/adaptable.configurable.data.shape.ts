@@ -20,8 +20,3 @@ export interface AdaptableConfigurableDataShape<
   T,
   R extends boolean = InferAsyncOf<[C, A]>
 > extends AdaptableConfigurableBase<A, C, T, R> {}
-
-// DataShape
-// └── ConfigurableDataShape                // adds C
-// |   └── AdaptableConfigurableDataShape   // C, adds A 
-// └── AdaptableDataShape                   // adds A
