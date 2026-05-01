@@ -3,6 +3,9 @@
  */
 
 export type {
+  AdaptableConfigurableBase,
+  AdaptableConfigurableDataConstructor,
+  AdaptableConfigurableDataShape,
   AdaptableDataConstructor,
   AdaptableDataShape,
   AdaptableSettingsResolver,
