@@ -1,25 +1,19 @@
 // Interface.
 import type { Adaptable } from "@typedly/data-traits";
-import type { ConfigurableDataShape } from "@typedly/configurable-data";
 import type { DataAdapterShape } from "@typedly/data-adapter";
-import type { DataSettings, InferValue } from "@typedly/data";
-// Type.
-import type { InferAsyncOf } from "@typedly/data";
-import type { InferSettings } from "@typedly/configurable-data";
+import type { DataShape, InferAsync } from "@typedly/data";
 /**
  * @description The shape of a data type with optional adapter.
  * @export
  * @interface AdaptableDataShape
- * @template {DataAdapterShape<C, T, R> | undefined} A The adapter type, which can be undefined for more flexible inference.
- * @template {DataSettings<R> | undefined} [C=InferSettings<A>] The settings type, inferred from `A` if possible.
- * @template [T=InferValue<A>] The value type, inferred from `A` if possible.
- * @template {boolean} [R=InferAsyncOf<[C, A]>] The async flag, inferred from C or `A` if possible.
- * @extends {Adaptable<A>} The adaptable trait, which provides the adapter type `A`.
- * @extends {ConfigurableDataShape<C, T, R>} The configurable data shape, which provides the settings type `C`, value type `T`, and async flag `R`.
+ * @template {DataAdapterShape<T, R> | undefined} A The adapter type, which can be undefined for more flexible inference.
+ * @template T The value type.
+ * @template {boolean} [R=InferAsync<A>] The async flag, inferred from `A` if possible.
+ * @extends {Adaptable<A>}
+ * @extends {DataShape<T, R>}
  */
 export interface AdaptableDataShape<
-  A extends DataAdapterShape<C, T, R> | undefined,
-  C extends DataSettings<R> | undefined = InferSettings<A>,
-  T = InferValue<A>,
-  R extends boolean = InferAsyncOf<[C, A]>
-> extends Adaptable<A>, ConfigurableDataShape<C, T, R> {}
+  A extends DataAdapterShape<T, R> | undefined,
+  T,
+  R extends boolean = InferAsync<A>
+> extends Adaptable<A>, DataShape<T, R> {}
