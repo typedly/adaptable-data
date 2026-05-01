@@ -1,5 +1,5 @@
 // Interface & Type.
-import type { AdaptableConfigurableDataShape } from "./adaptable.configurable.data.shape";
+import type { AdaptableConfigurableDataShape } from "./adaptable-configurable.data.shape";
 import type { ConfigurableDataAdapterConstructor, ConfigurableDataAdapterShape } from "@typedly/data-adapter";
 import type { DataSettings, InferAsyncOf } from "@typedly/data";
 /**
