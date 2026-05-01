@@ -1,36 +1,26 @@
 // Interface.
-import { AdaptableDataShape } from './adaptable.data.shape';
-import { DataAdapterConstructor, DataAdapterShape } from '@typedly/data-adapter';
-import {
-  DataSettings,
-  // Type.
-  InferAsyncOf,
-  InferValue
-} from '@typedly/data';
-import { InferSettings } from '@typedly/configurable-data';
+import type { AdaptableDataShape } from './adaptable.data.shape';
+import type { DataAdapterConstructor, DataAdapterShape } from '@typedly/data-adapter';
 /**
  * @description The constructor interface for data types with adapter.
  * @export
  * @interface AdaptableDataConstructor
- * @template {DataAdapterShape<T, C, R>} A The data adapter instance type.
- * @template {AdaptableDataShape<A, T, C, R>} I The data instance type.
- * @template {{ async?: boolean }} [C=A extends DataAdapterShape<any, infer V, any> ? V : any] The configuration type, inferred from A if possible.
- * @template [T=A extends DataAdapterShape<infer U, any, any> ? U : any] The underlying value type, inferred from A if possible.
- * @template {boolean} [R=A extends DataAdapterShape<T, C, infer U> ? U extends boolean ? U : false : false] The async flag, inferred from A if possible.
+ * @template {DataAdapterShape<T, S> | undefined} A The data adapter instance type.
+ * @template {AdaptableDataShape<A, T, S>} I The data instance type.
+ * @template T The value type.
+ * @template {boolean} S The async flag, which can be inferred from `A` if possible.
  * @template {readonly any[]} [G=[]] The additional arguments type.
  */
 export interface AdaptableDataConstructor<
-  A extends DataAdapterShape<C, T, R>,
-  I extends AdaptableDataShape<A, C, T, R>,
-  C extends DataSettings<R> = InferSettings<A>,
-  T = InferValue<A>,
-  R extends boolean = InferAsyncOf<[C, A, I]>,
+  I extends AdaptableDataShape<A, T, S>,
+  A extends DataAdapterShape<T, S> | undefined,
+  T,
+  S extends boolean,
   G extends readonly any[] = []
 > {
   new (
-    settings: C,
-    value: T | undefined,
-    adapter: DataAdapterConstructor<A, C, T, R, G>,
+    value?: T,
+    adapter?: DataAdapterConstructor<A, T, S, G>,
     ...args: G
   ): I;
 }
