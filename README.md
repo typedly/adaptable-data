@@ -36,9 +36,9 @@ A **TypeScript** type definitions package for configurable, composable, trait-dr
 - [Installation](#installation)
 - [Api](#api)
   - Interface
-    - [`AdaptableConfigurableBase`](#adaptabledatashape)
-    - [`AdaptableConfigurableDataConstructor`](#adaptabledatashape)
-    - [`AdaptableConfigurableDataShape`](#adaptabledatashape)
+    - [`AdaptableConfigurableBase`](#adaptableconfigurablebase)
+    - [`AdaptableConfigurableDataConstructor`](#adaptableconfigurabledataconstructor)
+    - [`AdaptableConfigurableDataShape`](#adaptableconfigurabledatashape)
     - [`AdaptableDataConstructor`](#adaptabledataconstructor)
     - [`AdaptableDataShape`](#adaptabledatashape)
   - Type
@@ -98,7 +98,7 @@ import type {
 } from '@typedly/adaptable-data';
 ```
 
-## API Type Hierarchy
+### API Type Hierarchy
 
 ```text
 DataShape
@@ -108,6 +108,30 @@ DataShape
 ```
 
 ### Interface
+
+### `AdaptableConfigurableBase`
+
+```typescript
+import { AdaptableConfigurableBase } from '@typedly/adaptable-data';
+```
+
+[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/adaptable.configurable.base.ts)
+
+### `AdaptableConfigurableDataConstructor`
+
+```typescript
+import { AdaptableConfigurableDataConstructor } from '@typedly/adaptable-data';
+```
+
+[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/configurable-adaptable.data.constructor.ts)
+
+### `AdaptableConfigurableDataShape`
+
+```typescript
+import { AdaptableConfigurableDataShape } from '@typedly/adaptable-data';
+```
+
+[Source](https://github.com/typedly/adaptable-data/blob/main/src/lib/configurable-adaptable.data.shape.ts)
 
 ### `AdaptableDataConstructor`
 
