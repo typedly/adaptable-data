@@ -85,11 +85,23 @@ npm install @typedly/adaptable-data --save-peer
 ## Api
 
 ```typescript
-import {
+import type {
+  AdaptableConfigurableBase,
+  AdaptableConfigurableDataConstructor,
+  AdaptableConfigurableDataShape,
   AdaptableDataConstructor,
   AdaptableDataShape,
-  AdaptableSettings,
+  AdaptableSettingsResolver,
 } from '@typedly/adaptable-data';
+```
+
+## API Type Hierarchy
+
+```text
+DataShape
+└── ConfigurableDataShape                // adds `C` configuration
+|   └── AdaptableConfigurableDataShape   // `C`, adds `A` adapter with configuration
+└── AdaptableDataShape                   // adds `A` adapter without configuration
 ```
 
 ### Interface
