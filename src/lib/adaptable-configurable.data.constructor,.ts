@@ -1,7 +1,7 @@
 // Interface & Type.
 import type { AdaptableConfigurableDataShape } from "./adaptable-configurable.data.shape";
 import type { ConfigurableDataAdapterConstructor, ConfigurableDataAdapterShape } from "@typedly/data-adapter";
-import type { DataSettings, InferAsyncOf } from "@typedly/data";
+import type { DataSettings } from "@typedly/data";
 /**
  * @description Represents the constructor of an adaptable and configurable data type, which can be instantiated with optional settings, value, and adapter.
  * @export
